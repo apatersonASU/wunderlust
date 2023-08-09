@@ -87,6 +87,7 @@ table {
 body {
 	line-height: 1.25;
 	color: black;
+	font-family: 'Montserrat, sans-serif';
 }
 
 /*----- HEADER STYLES -----*/
@@ -111,4 +112,5 @@ header img {
 
 h1 {
 	font-family: 'Molle, cursive';
+	font-size: 2em;
 }
