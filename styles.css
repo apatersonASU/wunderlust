@@ -50,8 +50,7 @@ table {
 	border-spacing: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Molle&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
 
 :root {
     --yellow: #F6D64A;
@@ -106,10 +105,26 @@ header {
 /*----- TYPE STYLES -----*/
 
 h1 {
-	font-family: 'Molle, cursive';
-	font-size: 2em;
+	font-family: 'Molle', cursive;
+	font-size: 50px;
 }
 
-p {
-	font-family: 'Montserrat, sans-serif';
+h2 {
+	font-family: 'Molle', cursive;
+	font-size: 45px;
+}
+
+h3 {
+	font-family: 'Molle', cursive;
+	font-size: 40px;
+}
+
+h4 {
+	font-family: 'Molle', cursive;
+	font-size: 30px;
+}
+
+p, q, nav, a, form {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
 }
