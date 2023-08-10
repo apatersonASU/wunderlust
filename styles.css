@@ -84,9 +84,11 @@ table {
 /* ----- BODY STYLES ----- */
 
 body {
+  min-width: 360px;
 	line-height: 1.25;
 	color: black;
-	margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 /*----- HEADER STYLES -----*/
@@ -100,7 +102,11 @@ header {
 
 #logo {
 	padding: 1em;
-	max-width: 150px;
+	max-width: 100px;
+}
+
+h1, h2, h3, h4, p, q {
+  margin: 0 25px;
 }
 
 /*----- TYPE STYLES -----*/
@@ -128,6 +134,7 @@ h4 {
 p, q, nav, a, form {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 20px;
+  padding: 10px;
 }
 
 /*----- HIDDEN SR ONLY-----*/
@@ -151,8 +158,8 @@ p, q, nav, a, form {
 #menu-toggle {
     display: block;
     position: relative;
-    top: 50px;
-    left: 50px;  
+    top: -250px;
+    left: 300px;  
     z-index: 1;  
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -172,14 +179,13 @@ p, q, nav, a, form {
     color: #4f7794;
   }
   
-  
   /* The hamburger button hidden inside an input element */
   #menu-toggle input {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 100%;
+    height: 40px;
     position: absolute;
-    top: -7px;
+    top: 0px;
     left: -5px;  
     padding: 0;
     cursor: pointer;  
@@ -191,11 +197,12 @@ p, q, nav, a, form {
   #menu-toggle label {
     position: relative;
     display: block;
-    width: 30px;
+    width: 50%;
     height: 30px;
-  }
-  #menu-toggle label span {
-    display: none;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--yellow);
   }
   
   /*
@@ -203,11 +210,11 @@ p, q, nav, a, form {
    */
   #menu-toggle label div {
     display: block;
-    width: 30px;
-    height: 2px;
+    width: 100%;
+    height: 1000px;
     margin-bottom: 6px;
     position: relative;
-    background: #cdcdcd;
+    background: red;
     border-radius: 3px;  
     z-index: 1;  
     -webkit-transform-origin: 4px 0px;  
@@ -218,23 +225,11 @@ p, q, nav, a, form {
     transition: all 0.3s ease;
   }
   
-  #menu-toggle label div:first-child {
-    -webkit-transform-origin: 0% 100%;
-        -ms-transform-origin: 0% 100%;
-            transform-origin: 0% 100%;
-  }
-  
-  #menu-toggle label div:nth-child(2) {
-      -webkit-transform-origin: 0% 0%;
-        -ms-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
-  }
-  
   /* 
    * Change the color of the hamburger when toggled
    */
   #menu-toggle input:checked + label div {
-    background: #232323;
+    background: var(--teal);
   }
   
   /*
@@ -242,14 +237,14 @@ p, q, nav, a, form {
    */
   #menu-toggle ul {
     position: absolute;
-    width: 300px;
+    width: 100%;
     margin: -100px 0 0 -50px;
     padding: 50px;
-    padding-top: 125px;
-    background: #ededed;
+    padding-top: 50px;
+    background: var(--teal);
     list-style-type: none;
-    /* Hide the menu off-screen to the left */
-    left: -100%;
+    /* Hide the menu off-screen to the right */
+    left: 500%;
     -webkit-transition: left 0.3s ease;
     -o-transition: left 0.3s ease;
     transition: left 0.3s ease; 
@@ -257,7 +252,8 @@ p, q, nav, a, form {
   
   #menu-toggle li {
     padding: 10px 0;
-    font-size: 22px;
+    text-transform: uppercase;
+    background: var(--teal);
   }
   
   /*
@@ -266,4 +262,40 @@ p, q, nav, a, form {
   #menu-toggle input:checked ~ ul {
     left: 0;
   }
+
+#plan {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--yellow);
+}
+
+#plan h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+ #plan img  {
+   background-color: var(--teal);
+   color: white;
+   width: 60%;
+   padding: 30px;
+   border-radius: 20px;
+}
+
+#about {
+  background: var(--blue);
+}
+
+#about h3 {
+  padding: 10px;
+}
+
+#about div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
 
